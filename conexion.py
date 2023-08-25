@@ -1,8 +1,8 @@
 import sys
 import pyodbc
-conn= pyodbc.connect(r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ= c:\Users\cuc\Documents\base\Database2.accdb;")
+conn= pyodbc.connect(r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ= C:\Users\jorge\OneDrive\Documentos\universidad\Buenas practicas de desarrollo\Base de datos acces\base_da.accdb;")
 cursor=conn.cursor()
-cursor.execute("SELECT * FROM persona_1")
+cursor.execute("SELECT * FROM Registro_notas WHERE Nota>4.5")
 for row in cursor.fetchall():
     print(row)
 cursor.close
